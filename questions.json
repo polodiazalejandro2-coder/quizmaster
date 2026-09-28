@@ -1,0 +1,102 @@
+[
+    {
+        "pregunta": "¿Cuál es la diferencia principal entre un repositorio centralizado y Git?",
+        "opciones": ["Git usa un servidor único.", "Git distribuye el repositorio.", "Git no usa servidores.", "Git es más lento."],
+        "correcta": "Git distribuye el repositorio."
+    },
+    {
+        "pregunta": "¿Qué información almacena el archivo .git?",
+        "opciones": ["Solo configuración.", "Historial completo.", "Solo ramas actuales.", "Solo los commits."],
+        "correcta": "Historial completo."
+    },
+    {
+        "pregunta": "¿Cuándo deberías usar git init en lugar de git clone?",
+        "opciones": ["Cuando trabajas remoto.", "Para un proyecto nuevo.", "Cuando tienes equipo.", "Para hacer backup."],
+        "correcta": "Para un proyecto nuevo."
+    },
+    {
+        "pregunta": "Si ejecutas git clone, ¿qué rama local se crea automáticamente?",
+        "opciones": ["La rama develop.", "Rama predeterminada remota.", "Una rama nueva.", "Rama llamada clone."],
+        "correcta": "Rama predeterminada remota."
+    },
+    {
+        "pregunta": "¿Qué archivos muestra git status como modificados?",
+        "opciones": ["Archivos nuevos.", "Cambios no preparados.", "Cambios ya enviados.", "Archivos eliminados."],
+        "correcta": "Cambios no preparados."
+    },
+    {
+        "pregunta": "¿Cuál es la función principal de git add?",
+        "opciones": ["Crear nuevo archivo.", "Mover archivo remoto.", "Preparar cambios.", "Subir a servidor."],
+        "correcta": "Preparar cambios."
+    },
+    {
+        "pregunta": "¿Qué diferencia hay entre git add . y git add archivo.txt?",
+        "opciones": ["add . es más rápido.", ". añade todo directorio.", "archivo.txt no funciona.", "No hay diferencia."],
+        "correcta": ". añade todo directorio."
+    },
+    {
+        "pregunta": "¿Qué muestra git diff sin parámetros?",
+        "opciones": ["Todos los commits.", "Cambios no preparados.", "Historial completo.", "Archivo diferente."],
+        "correcta": "Cambios no preparados."
+    },
+    {
+        "pregunta": "¿Qué comando muestra los cambios que ya preparaste con add?",
+        "opciones": ["git diff --all", "git diff HEAD", "git diff --staged", "git diff --ready"],
+        "correcta": "git diff --staged"
+    },
+    {
+        "pregunta": "¿Cuál es el propósito del parámetro -m en git commit?",
+        "opciones": ["Cambiar rama main.", "Marcar archivo.", "Describir cambios.", "Mover commits."],
+        "correcta": "Describir cambios."
+    },
+    {
+        "pregunta": "¿Qué representa el hash SHA en un commit?",
+        "opciones": ["La contraseña.", "Identificador único.", "La fecha actual.", "El nombre rama."],
+        "correcta": "Identificador único."
+    },
+    {
+        "pregunta": "Si necesitas cambiar el mensaje del último commit sin modificar archivos, ¿qué haces?",
+        "opciones": ["git reset HEAD", "git commit --amend", "git revert HEAD", "git push --force"],
+        "correcta": "git commit --amend"
+    },
+    {
+        "pregunta": "¿Cuál es la diferencia entre git reset --soft y --hard?",
+        "opciones": ["--soft es más rápido.", "--hard mantiene cambios.", "--soft mantiene cambios en staging.", "No hay diferencia real."],
+        "correcta": "--soft mantiene cambios en staging."
+    },
+    {
+        "pregunta": "¿Qué hace git reset --mixed?",
+        "opciones": ["Borra todos cambios.", "Mantiene archivos modificados.", "Deshace el merge.", "Crea rama nueva."],
+        "correcta": "Mantiene archivos modificados."
+    },
+    {
+        "pregunta": "¿Cuándo usarías git revert en lugar de git reset?",
+        "opciones": ["Siempre es mejor.", "Para cambio local no subido.", "Commit ya compartido.", "Es lo mismo siempre."],
+        "correcta": "Commit ya compartido."
+    },
+    {
+        "pregunta": "¿Qué comando muestra todas las ramas locales?",
+        "opciones": ["git branch --all", "git branch -local", "git branch sin parámetros", "git list branches"],
+        "correcta": "git branch sin parámetros"
+    },
+    {
+        "pregunta": "¿Cómo creas una rama y cambias a ella en un solo comando?",
+        "opciones": ["git branch -c rama", "git checkout -b rama", "git switch -n rama", "git create rama"],
+        "correcta": "git checkout -b rama"
+    },
+    {
+        "pregunta": "¿A qué equivale git pull?",
+        "opciones": ["fetch + reset", "fetch + merge", "push + fetch", "clone + merge"],
+        "correcta": "fetch + merge"
+    },
+    {
+        "pregunta": "¿Para qué sirve git stash?",
+        "opciones": ["Guardar temporalmente.", "Borrar cambios.", "Crear rama nueva.", "Actualizar remoto."],
+        "correcta": "Guardar temporalmente."
+    },
+    {
+        "pregunta": "¿Qué hace git rebase rama?",
+        "opciones": ["Fusiona dos ramas.", "Reaplica commits.", "Cambia rama.", "Crea rama nueva."],
+        "correcta": "Reaplica commits."
+    }
+]
