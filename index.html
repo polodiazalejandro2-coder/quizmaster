@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Sección de inicio -->
+    <section id="inicio" class="pantalla">
+        <div class="caja">
+            <h1>Bienvenido pe Causa</h1>
+            <p>Escribe tu nombre para comenzar</p>
+
+            <input id="nombre" type="text" placeholder="Tu nombre" />
+            <button id="boton-empezar">D1</button>
+        </div>
+    </section>
+    <!-- Sección de preguntas -->
+    <section id="preguntas" class="pantalla">
+        <div class="caja">
+            <h2 id="pregunta"></h2>
+            <div id="opciones"></div>
+            <button id="boton-siguiente">Siguele</button>
+        </div>
+    </section>
+
+    <!-- Sección de resultados -->
+    <section id="resultados" class="pantalla">
+        <div class="caja">
+            <h2>Resultados</h2>
+            <p id="resultado"></p>
+            <button id="boton-reiniciar">Reiniciar</button>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/* ESTILOS GENERALES */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+}
+
+.pantalla {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja {
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #cccccc;
+}
+
+.oculto {
+  display: none;
+}
+
+/* SECCIÓN 1: PANTALLA DEL NOMBRE */
+#inicio {
+  background-color: #6c4ad1;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #6c4ad1;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5638ad;
+}
