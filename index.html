@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizMaster</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="functions.js" defer></script>
 </head>
 
 <body>
-    <!-- Sección de inicio -->
-    <section id="inicio" class="pantalla">
-        <div class="caja">
-            <h1>Bienvenido pe Causa</h1>
-            <p>Escribe tu nombre para comenzar</p>
+    <main>
+        <section id="pantalla-inicio" class="pantalla pantalla-inicio">
+            <div class="panel-inicio">
+                <p class="etiqueta">Preguntas de Chema Git</p>
+                <h1>Quizziz .Pe</h1>
+                <p>Escribe tu name causa</p>
+                <label for="nombre-jugador">Tu nombre</label>
+                <input id="nombre-jugador" type="text" placeholder="Por ejemplo, Alex" maxlength="24" autocomplete="nickname">
+                <button id="boton-iniciar" class="boton-principal" type="button">D1</button>
+            </div>
+        </section>
 
-            <input id="nombre" type="text" placeholder="Tu nombre" />
-            <button id="boton-empezar">D1</button>
-        </div>
-    </section>
-    <!-- Sección de preguntas -->
-    <section id="preguntas" class="pantalla">
-        <div class="caja">
-            <h2 id="pregunta"></h2>
-            <div id="opciones"></div>
-            <button id="boton-siguiente">Siguele</button>
-        </div>
-    </section>
+        <section id="pantalla-juego" class="pantalla pantalla-juego oculto">
+            <div class="contenedor-juego">
+                <header class="encabezado-juego">
+                    <div>
+                        <p class="etiqueta">Preguntas de Chema Git</p>
+                        <h1>Quizziz .Per</h1>
+                    </div>
+                    <div class="datos-jugador">
+                        <span id="nombre-mostrado">Jugador</span>
+                        <span id="ronda-mostrada" class="etiqueta-ronda">Ronda 1 de 2</span>
+                        <div class="marcador">
+                            <span>Correctas: <strong id="marcador-correctas">0</strong></span>
+                            <span>Malas: <strong id="marcador-malas">0</strong></span>
+                        </div>
+                    </div>
+                </header>
 
-    <!-- Sección de resultados -->
-    <section id="resultados" class="pantalla">
-        <div class="caja">
-            <h2>Resultados</h2>
-            <p id="resultado"></p>
-            <button id="boton-reiniciar">Reiniciar</button>
-        </div>
-    </section>
+                <div id="contenedor-ronda"></div>
+                <button id="boton-comprobar" class="boton-principal" type="button">Comprobamos?</button>
+            </div>
+
+            <div id="ventana-final" class="ventana-final oculto" role="dialog" aria-modal="true" aria-labelledby="titulo-final">
+                <div class="contenido-modal">
+                    <h2 id="titulo-final">Resultado :v</h2>
+                    <p id="texto-final"></p>
+                    <div id="estadisticas-final" class="resumen-final"></div>
+                    <button id="boton-reiniciar" class="boton-principal" type="button">Volver a jugar</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

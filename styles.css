@@ -1,8 +1,23 @@
-/* ESTILOS GENERALES */
+:root {
+  font-family: 'Nunito', Arial, sans-serif;
+  color: #ffffff;
+  background: #0a0a0a;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  min-width: 320px;
+  min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #eeeeee;
+}
+
+button,
+input {
+  font: inherit;
 }
 
 .pantalla {
@@ -10,45 +25,264 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.caja {
-  width: 300px;
-  padding: 30px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px #cccccc;
+  padding: 24px;
 }
 
 .oculto {
-  display: none;
+  display: none !important;
 }
 
-/* SECCIÓN 1: PANTALLA DEL NOMBRE */
-#inicio {
-  background-color: #6c4ad1;
+.pantalla-inicio {
+  background: #000000;
 }
 
-input {
+.panel-inicio {
+  width: min(100%, 420px);
+  padding: 30px;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  background: #141414;
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  color: #a855f7;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.panel-inicio h1,
+.encabezado-juego h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.panel-inicio > p:not(.etiqueta) {
+  margin: 10px 0 26px;
+  color: #a3a3a3;
+}
+
+.panel-inicio label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #e5e5e5;
+}
+
+.panel-inicio input {
   width: 100%;
-  padding: 12px;
-  margin: 15px 0;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  outline-color: #a855f7;
+  background: #000000;
+  color: #ffffff;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  background-color: #6c4ad1;
+.boton-principal {
+  min-height: 46px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 7px;
+  color: #ffffff;
+  background: #a855f7;
+  font-weight: 700;
   cursor: pointer;
+  transition: filter 0.15s ease;
 }
 
-button:hover {
-  background-color: #5638ad;
+.boton-principal:hover {
+  filter: brightness(1.08);
+}
+
+.panel-inicio .boton-principal {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.pantalla-juego {
+  align-items: flex-start;
+  background: #000000;
+}
+
+.contenedor-juego {
+  width: min(100%, 850px);
+  margin: 16px auto;
+}
+
+.encabezado-juego {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.datos-jugador {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.etiqueta-ronda {
+  padding: 7px 12px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #262626;
+  font-size: 0.9rem;
+}
+
+.marcador {
+  display: flex;
+  gap: 10px;
+  padding: 7px 12px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #d4d4d4;
+  background: #141414;
+  font-size: 0.9rem;
+}
+
+.marcador span {
+  white-space: nowrap;
+}
+
+.lista-preguntas {
+  display: grid;
+  gap: 14px;
+}
+
+.tarjeta-pregunta {
+  padding: 22px 20px;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  background: #141414;
+}
+
+.numero-pregunta {
+  margin: 0 0 10px;
+  color: #a855f7;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.tarjeta-pregunta h2 {
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.rejilla-opciones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.boton-opcion {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, filter 0.15s ease;
+}
+
+.boton-opcion:nth-child(4n + 1) { background: #2563eb; }
+.boton-opcion:nth-child(4n + 2) { background: #0d9488; }
+.boton-opcion:nth-child(4n + 3) { background: #d97706; }
+.boton-opcion:nth-child(4n) { background: #dc2626; }
+
+.boton-opcion:hover {
+  filter: brightness(1.08);
+}
+
+.boton-opcion.seleccionada {
+  border-color: #ffffff;
+}
+
+#boton-comprobar {
+  display: block;
+  min-width: 210px;
+  margin: 20px auto 0;
+  background: #2dd4bf;
+  color: #000000;
+}
+
+.ventana-final {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.contenido-modal {
+  width: min(100%, 500px);
+  max-height: 85vh;
+  overflow: auto;
+  padding: 28px 24px;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  background: #141414;
+  text-align: center;
+}
+
+.contenido-modal h2 {
+  margin-top: 0;
+  color: #a855f7;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.resumen-final {
+  margin: 18px 0;
+  color: #d4d4d4;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.contenido-modal .boton-principal {
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  .panel-inicio {
+    padding: 28px 22px;
+  }
+
+  .encabezado-juego {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .encabezado-juego h1 {
+    font-size: 1.5rem;
+  }
+
+  .datos-jugador {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .rejilla-opciones {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
